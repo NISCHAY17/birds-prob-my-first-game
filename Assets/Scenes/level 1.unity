@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 249447515}
   - component: {fileID: 249447518}
   - component: {fileID: 249447519}
+  - component: {fileID: 249447520}
   m_Layer: 0
   m_Name: BIRD
   m_TagString: Untagged
@@ -249,7 +250,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1.09
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -332,6 +333,18 @@ PolygonCollider2D:
       - {x: -0.16, y: -0.22999999}
       - {x: -0.049999997, y: -0.35}
   m_UseDelaunayMesh: 0
+--- !u!114 &249447520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 249447514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f5de164e78ec144da7994e384d0be27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -554,7 +567,7 @@ Transform:
   m_GameObject: {fileID: 540145063}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.27, y: -3.98, z: 0}
+  m_LocalPosition: {x: -0.27, y: -4.55, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -570,7 +583,7 @@ BoxCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 4eaf069059f8a144a99d6bf7a1797362, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
