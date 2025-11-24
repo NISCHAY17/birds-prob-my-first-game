@@ -8,6 +8,8 @@ public class PlsWork : MonoBehaviour
     private Rigidbody2D rb;
     private bool dragging;
     private Vector3 offset;
+    public Vector3 startingposition; 
+    public float launchForce = 5f; 
 
     void Awake()
     {
@@ -20,6 +22,15 @@ public class PlsWork : MonoBehaviour
     void Start()
     {
         Debug.Log("plswork");
+        startingposition = transform.position;
+        if (rb != null) rb.gravityScale = 0f; // Start with no gravity
+    }
+
+    void OnMouseUp()
+    {
+        Vector3 directionmagnitude = transform.position - startingposition;
+        rb.AddForce(directionmagnitude * launchForce, ForceMode2D.Impulse);
+        if (rb != null) rb.gravityScale = 1f; // Enable gravity after launch
     }
 
     void Update()
@@ -38,7 +49,7 @@ public class PlsWork : MonoBehaviour
             {
                 dragging = true;
                 offset = transform.position - worldPoint;
-                if (rb != null) rb.gravityScale = 0f;
+                // Gravity already off from Start()
             }
         }
 
@@ -54,7 +65,7 @@ public class PlsWork : MonoBehaviour
         if (dragging && Mouse.current.leftButton.wasReleasedThisFrame)
         {
             dragging = false;
-            if (rb != null) rb.gravityScale = 1f;
+            // Don't change gravity here - let OnMouseUp() handle it
         }
 
         // keyboard helpers
