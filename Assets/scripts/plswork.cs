@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlsWork : MonoBehaviour
 {
@@ -95,6 +96,22 @@ public class PlsWork : MonoBehaviour
             if (Keyboard.current.qKey.wasPressedThisFrame) rb.gravityScale = 10f;
             if (Keyboard.current.eKey.wasPressedThisFrame) rb.gravityScale = -20f;
         }
+        if (FindAnyObjectByType<Enemy>(FindObjectsInactive.Exclude) == null)
+        {
+            Debug.Log("You Win!");
+            var Levelrn = SceneManager.GetActiveScene().buildIndex  + 1 ;
+            SceneManager.LoadScene(Levelrn);
+        }
     }
+        private void OnCollisionEnter2D(Collision2D collision)
+        {
+        Invoke(nameof(reloadlevel), 5);
+        }
+        
+        void reloadlevel()
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+    
 }
 
