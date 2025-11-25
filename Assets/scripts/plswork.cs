@@ -28,7 +28,7 @@ public class PlsWork : MonoBehaviour
 
     void OnMouseUp()
     {
-        Vector3 directionmagnitude = transform.position - startingposition;
+        Vector3 directionmagnitude = startingposition - transform.position;
         rb.AddForce(directionmagnitude * launchForce, ForceMode2D.Impulse);
         if (rb != null) rb.gravityScale = 1f; // Enable gravity after launch
     }
