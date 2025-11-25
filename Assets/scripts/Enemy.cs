@@ -2,13 +2,23 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    void onCollisionEnter2D(Collision2D collision)
+    [SerializeField] float DestroyImpactMagnitude = 10f;
+    
+    void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Enemy collided with Player!");
-            // Add logic for what happens when the enemy collides with the player
+            Debug.Log("Enemy collided with Bird!");
+            Destroy(gameObject);
+        }
+        
+        if (collision.relativeVelocity.magnitude > DestroyImpactMagnitude)
+        {
+            Debug.Log("Enemy hit with significant force!");
+            Destroy(gameObject);
         }
     }
 }
+
+
 
