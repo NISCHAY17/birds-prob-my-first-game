@@ -2764,7 +2764,7 @@ Transform:
   m_GameObject: {fileID: 1598525311}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.930759, y: 2.0158257, z: 0}
+  m_LocalPosition: {x: -1.930759, y: 1.0158257, z: 0}
   m_LocalScale: {x: 0.3468, y: 0.3468, z: 0.3468}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2783,7 +2783,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlsWork
   startingposition: {x: 0, y: 0, z: 0}
-  maxDragDistance: 5
+  maxDragDistance: 5.65
   launchForce: 8.85
 --- !u!1 &1647553143
 GameObject:

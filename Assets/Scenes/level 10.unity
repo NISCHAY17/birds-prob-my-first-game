@@ -4294,7 +4294,7 @@ Transform:
   m_GameObject: {fileID: 1598525311}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.930759, y: 2.0158257, z: 0}
+  m_LocalPosition: {x: -3.930759, y: 1.0158257, z: 0}
   m_LocalScale: {x: 0.3468, y: 0.3468, z: 0.3468}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4540,8 +4540,30 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9095226954740752706, guid: 84c043bd887325d448927c7c87440e4b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1652523130}
   m_SourcePrefab: {fileID: 100100000, guid: 84c043bd887325d448927c7c87440e4b, type: 3}
+--- !u!1 &1652523129 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9095226954740752706, guid: 84c043bd887325d448927c7c87440e4b, type: 3}
+  m_PrefabInstance: {fileID: 1652523128}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1652523130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1652523129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b340d89c575a7e249b14c0ba21287471, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Timer
+  timeElapsed: 0
+  running: 1
 --- !u!1001 &1846754613
 PrefabInstance:
   m_ObjectHideFlags: 0
